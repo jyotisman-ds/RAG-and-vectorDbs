@@ -1,7 +1,7 @@
 [project]
 name = "rag-and-vectordbs"
 version = "0.1.0"
-description = "Add your description here"
+description = "Rag and VectorDBs"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
