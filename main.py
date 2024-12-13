@@ -12,7 +12,7 @@ if __name__ == "__main__":
     embeddings = OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API_KEY"))
     llm = ChatOpenAI(model="gpt-4o")
 
-    question = "What is SingleStore in the context of LLMs?"
+    QUERY = "What is SingleStore in the context of LLMs?"
     # chain = PromptTemplate.from_template(template=question) | llm
     # response = chain.invoke(input={})
     # print(response.content)
@@ -30,5 +30,5 @@ if __name__ == "__main__":
     retrieval_chain = create_retrieval_chain(
         retriever=vector_store.as_retriever(), combine_docs_chain=combine_docs_chain
     )
-    result = retrieval_chain.invoke(input={"input": question})
+    result = retrieval_chain.invoke(input={"input": QUERY})
     print(result)
